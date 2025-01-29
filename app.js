@@ -57,6 +57,21 @@ function sortearAmigo() {
     
     // atualizando a lista para exibir os amigos restantes
     atualizarLista();
+
+    // Se a lista estiver vazia após o sorteio, o programa reinicia automaticamente
+    if (listaDeAmigos.length === 0) {
+        setTimeout(() => {
+           alert('Todos os amigos foram sorteados! O programa será reiniciado.');
+           reiniciarPrograma();
+        }, 1000); // pequeno atraso para exibir a mensagem antes de resetar
+    }
+}
+
+// função para reiniciar o programa
+function reiniciarPrograma() {
+    listaDeAmigos = []; // zerando a lista de amigos
+    document.getElementById('listaAmigos').innerHTML = ''; // limpa a exibição da lista
+    document.getElementById('resultado').innerHTML = ''; // limpa o resultado do sorteio 
 }
 
 
