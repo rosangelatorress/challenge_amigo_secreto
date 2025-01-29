@@ -51,9 +51,15 @@ function sortearAmigo() {
     // obtendo o nome sorteado
     const amigoSorteado = listaDeAmigos[indiceAleatorio];
 
+    // removendo o amigo sorteado da lista
+    listaDeAmigos = listaDeAmigos.filter(amigo => amigo !== amigoSorteado);
+
     // mostrando o resultado na tela
     const resultadoElement = document.getElementById('resultado');
-    resultadoElement.innerHTML = `<p>O amigo sorteado foi: <strong>${amigoSorteado}</strong></p>`
+    resultadoElement.innerHTML = `<p>O amigo sorteado foi: <strong>${amigoSorteado}</strong></p>`;
+    
+    // atualizando a lista para exibir os amigos restantes
+    atualizarLista();
 }
 
 
