@@ -74,4 +74,5 @@ function reiniciarPrograma() {
     document.getElementById('resultado').innerHTML = ''; // limpa o resultado do sorteio 
 }
 
+// adicionando um evento para capturar a tecla 'Enter' no campo 'Digite um nome'
 
