@@ -48,11 +48,8 @@ function sortearAmigo() {
     // gerando um indice aleatório
     const indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
 
-    // obtendo o nome sorteado
-    const amigoSorteado = listaDeAmigos[indiceAleatorio];
-
-    // removendo o amigo sorteado da lista
-    listaDeAmigos = listaDeAmigos.filter(amigo => amigo !== amigoSorteado);
+    // obtendo e removendo o nome sorteado da lista
+    const amigoSorteado = listaDeAmigos.splice(indiceAleatorio, 1)[0];
 
     // mostrando o resultado na tela
     const resultadoElement = document.getElementById('resultado');
