@@ -3,7 +3,8 @@
 
 # 🎁 Challenge Sorteador de Amigos Secreto
 
-Este é um projeto simples de um **Challenge Sorteador de Amigos Secreto**, feito com **HTML, CSS e JavaScript**. O usuário pode adicionar nomes à lista, sortear um nome aleatório e ouvir o resultado com um leitor de tela integrado!
+Este é um projeto simples de um **Challenge Sorteador de Amigos Secreto**, feito com **HTML, CSS e JavaScript**. 
+O usuário pode adicionar nomes à lista, sortear um nome aleatório e ouvir o resultado com um leitor de tela integrado!
 
 ## 🚀 Funcionalidades
 
