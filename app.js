@@ -1,6 +1,25 @@
 // armazenando os nomes dos amigos 
 let listaDeAmigos = [];
 
+function lerTexto(nomeSorteado) {
+    let synth = window.speechSynthesis;
+    let utterance = new SpeechSynthesisUtterance(nomeSorteado);
+    utterance.lang = 'pt-BR';
+    utterance.rate = 1.2; // velocidade da leitura
+    synth.speak(utterance);
+}
+
+
+function repetirLeitura() {
+    let nomeSorteado = document.getElementById('resultado').innerText;
+
+    if (nomeSorteado.trim() !== '') {
+        lerTexto(nomeSorteado);
+    } else {
+        alert('Nenhum nome foi sorteado ainda!');
+    }
+}
+
 // função para adicionar um amigo a lista
 function adicionarAmigo() {
     // salvando o nome no campo de entrada
@@ -18,6 +37,9 @@ function adicionarAmigo() {
 
     // limpando o campo de entrada
     inputAmigo.value = '';
+
+    // focando novamente no campo de entrada
+    inputAmigo.focus();
 
     // exibindo a lista de nomes
     atualizarLista();
@@ -55,6 +77,9 @@ function sortearAmigo() {
     const resultadoElement = document.getElementById('resultado');
     resultadoElement.innerHTML = `<p>O amigo sorteado foi: <strong>${amigoSorteado}</strong></p>`;
     
+    // chamando a função para ler o nome sorteado
+    lerTexto(`O amigo sorteado foi ${amigoSorteado}`);
+    
     // atualizando a lista para exibir os amigos restantes
     atualizarLista();
 
@@ -75,4 +100,8 @@ function reiniciarPrograma() {
 }
 
 // adicionando um evento para capturar a tecla 'Enter' no campo 'Digite um nome'
-//mnhhgvb
+document.getElementById('amigo').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        adicionarAmigo(); //chamando a função que adiciona o nome
+    }
+});
