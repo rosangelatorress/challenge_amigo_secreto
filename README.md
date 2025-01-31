@@ -38,4 +38,3 @@ O usuário pode adicionar nomes à lista, sortear um nome aleatório e ouvir o r
 
 # Desenvolvedora :octocat:
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Rosángela Torres</sub>] (https://github.com/rosangelatorress)
