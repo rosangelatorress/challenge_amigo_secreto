@@ -36,5 +36,7 @@ O usuário pode adicionar nomes à lista, sortear um nome aleatório e ouvir o r
 
 ![Sorteador de Amigos Secreto](aparencia.png)
 
-# Desenvolvedora :octocat:
+## Desenvolvedora :octocat:
 
+| [<img loading="lazy" src="https://github.com/rosangelatorress.png" width=115><br><sub>Rosángela Torres</sub>](https://github.com/rosangelatorress) |
+| :---: |
